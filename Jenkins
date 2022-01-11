@@ -4,7 +4,7 @@ pipeline {
 
         stage("Git checkout"){
           steps {
-           git credentialsId: 'github-cred', url: ''
+           git credentialsId: 'github-cred', url: 'https://github.com/janardhan-0348/devopsclsrepo26.git'
     }
         }
           
