@@ -1,7 +1,25 @@
-pipeline{
-   
+pipeline {
+   agent any
+   stages {
 
-
-
+        stage("Git checkout"){
+          steps {
+           git credentialsId: 'github-cred', url: ''
+    }
+        }
+          
+           stage("Maven build"){
+              steps {
+               sh 'mvn clean package'
+               sh "mv target/*.war target/myweb.war"  
+              }
+           }
+      
+     
+      
+      
+      }
+           
+}
 
 }
