@@ -4,14 +4,14 @@ pipeline {
 
         stage("Git checkout"){
           steps {
-           git credentialsId: 'github-cred', url: 'https://github.com/janardhan-0348/devopsclsrepo26.git'
+              'https://github.com/janardhan-0348/devopsclsrepo26.git'
     }
         }
           
            stage("Maven build"){
               steps {
                sh 'mvn clean package'
-               sh "mv target/*.war target/myweb.war"  
+            
               }
            }
       
